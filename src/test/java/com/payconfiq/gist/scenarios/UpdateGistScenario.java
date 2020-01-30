@@ -42,7 +42,7 @@ public class UpdateGistScenario {
     public void updateGistFileContent() {
         String update_gist_file = readJson("UpdateGistRequest.json");
         GitApiClient.patchGist(GIT_API_AUTH_TOKEN, update_gist_file,gistId)
-                .then().log().all()
+                .then()
                 .statusCode(200)
                 .body("files.'payconiq.test'.content", equalTo("Hired"));
     }
@@ -51,7 +51,7 @@ public class UpdateGistScenario {
     public void renameGistFile(){
         String rename_gist_file = readJson("RenameGistFile.json");
         GitApiClient.patchGist(GIT_API_AUTH_TOKEN, rename_gist_file,gistId)
-                .then().log().all()
+                .then()
                 .statusCode(200)
                 .body("files", aMapWithSize(2))
                 .body("files", allOf(hasKey("company.test"),hasKey("payconiq.json"),not(hasKey("payconiq.test"))));
@@ -62,7 +62,7 @@ public class UpdateGistScenario {
     public void addGistFile(){
         String add_gist_file = readJson("AddGistFileRequest.json");
         GitApiClient.patchGist(GIT_API_AUTH_TOKEN, add_gist_file,gistId)
-                .then().log().all()
+                .then()
                 .statusCode(200)
                 .body("files", aMapWithSize(3))
                 .body("files" , allOf(hasKey("payconiq.test"),hasKey("payconiq.json"),hasKey("payconiq.xml")));
@@ -73,7 +73,7 @@ public class UpdateGistScenario {
     public void renameAndUpdateGistFile(){
         String rename_update_gist_file = readJson("RenameAndUpdateGistFile.json");
         GitApiClient.patchGist(GIT_API_AUTH_TOKEN, rename_update_gist_file,gistId)
-                .then().log().all()
+                .then()
                 .statusCode(200)
                 .body("files", aMapWithSize(2))
                 .body("files.'company.test'.content", equalTo("company test"))
@@ -84,7 +84,7 @@ public class UpdateGistScenario {
     public void deleteGistFile(){
         String delete_gist_file = readJson("DeleteGistFileRequest.json");
         GitApiClient.patchGist(GIT_API_AUTH_TOKEN, delete_gist_file,gistId)
-                .then().log().all()
+                .then()
                 .statusCode(200)
                 .body("files", not(hasKey("payconiq.test")));
     }
