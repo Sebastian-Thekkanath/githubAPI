@@ -1,0 +1,9 @@
+{
+    "description": "Payconiq test example",
+    "public": true,
+    "files": {
+        "payconiq.xml": {
+            "content": "{\"hired\":true}"
+        }
+    }
+}

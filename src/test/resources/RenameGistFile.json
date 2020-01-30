@@ -1,0 +1,13 @@
+{
+    "description": "Payconiq test example",
+    "public": true,
+    "files": {
+        "payconiq.test": {
+            "content": "payconiq test",
+            "filename": "company.test"
+        },
+        "payconiq.json": {
+            "content": "{\"hired\":true}"
+        }
+    }
+}

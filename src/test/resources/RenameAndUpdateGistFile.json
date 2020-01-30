@@ -1,0 +1,10 @@
+{
+    "description": "Payconiq test example",
+    "public": true,
+    "files": {
+        "payconiq.test": {
+            "content": "company test",
+            "filename": "company.test"
+        }
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "description": "Payconiq test example",
+    "public": true,
+    "files": {
+        "payconiq.test": null
+    }
+}

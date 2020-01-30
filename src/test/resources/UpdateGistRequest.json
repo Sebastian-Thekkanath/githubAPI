@@ -1,0 +1,9 @@
+{
+    "description": "Payconiq updated example",
+    "public": true,
+    "files": {
+        "payconiq.test": {
+            "content": "Hired"
+        }
+    }
+}

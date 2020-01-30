@@ -1,0 +1,8 @@
+{
+    "description": "Payconiq test example",
+    "files": {
+        "payconiq.test": {
+            "content": "payconiq test"
+        }
+    }
+}
